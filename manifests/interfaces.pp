@@ -17,7 +17,6 @@ class cisco_examples::interfaces {
   port_channel{'port channel example':
     ensure       => present,
     id           => 100,
-    minimum_link => 1,
     interfaces   => ['ethernet1/1','ethernet1/2'],
   }
 
