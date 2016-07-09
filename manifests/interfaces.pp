@@ -1,5 +1,4 @@
 class cisco_examples::interfaces {
-  Class['cisco_examples'] -> Class['class_examples::interfaces']
 
   cisco_interface { 'ethernet1/9':
     ensure          => 'present',
