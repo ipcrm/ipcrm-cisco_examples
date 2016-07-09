@@ -6,13 +6,13 @@ class cisco_examples::interfaces {
       access_vlan     => '2',
       duplex          => 'auto',
       mtu             => '1500',
-      negotiate_auto  => true,
-      shutdown        => false,
+      negotiate_auto  => 'true',
+      shutdown        => 'false',
       speed           => 'auto',
-      stp_bpdufilter  => true,
-      stp_bpduguard   => true,
+      stp_bpdufilter  => 'enable',
+      stp_bpduguard   => 'enable',
       switchport_mode => 'access',
-      switchport_vtp  => false,
+      switchport_vtp  => 'false',
     }
   }
 }

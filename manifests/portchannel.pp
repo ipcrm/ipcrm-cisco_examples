@@ -3,19 +3,19 @@ class cisco_examples::portchannel {
   cisco_portchannel_global { 'default':
     bundle_hash   => 'ip',
     bundle_select => 'src-dst',
-    concatenation => true,
-    resilient     => false,
+    concatenation => 'true',
+    resilient     => 'false',
     rotate        => '4',
-    symmetry      => false,
+    symmetry      => 'false',
   }
 
   cisco_interface_portchannel {'port-channel100':
     ensure                    => 'present',
-    lacp_graceful_convergence => false,
+    lacp_graceful_convergence => 'false',
     lacp_max_bundle           => 10,
     lacp_min_links            => 2,
-    lacp_suspend_individual   => false,
+    lacp_suspend_individual   => 'false',
     port_hash_distribution    => 'adaptive',
-    port_load_defer           => true,
+    port_load_defer           => 'true',
   }
 }
