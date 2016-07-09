@@ -30,9 +30,8 @@ class cisco_examples {
   }
 
   # VTP
-  cisco_vtp {'example vtp config':
+  cisco_vtp {'default':
     ensure   => present,
-    name     => 'vtp01',
     domain   => 'examplevtp',
     password => 'example',
   }
