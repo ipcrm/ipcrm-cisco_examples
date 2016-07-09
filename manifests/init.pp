@@ -8,13 +8,13 @@ class cisco_examples {
   }
 
   # Configure some VLANs
-  cisco_vlan { 'vlan2':
+  cisco_vlan { '2':
     ensure    => 'present',
     shutdown  => false,
     state     => 'active',
     vlan_name => 'vlan2',
   }
-  cisco_vlan { 'vlan3':
+  cisco_vlan { '3':
     ensure    => 'present',
     shutdown  => false,
     state     => 'active',
