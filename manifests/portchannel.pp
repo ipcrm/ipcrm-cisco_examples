@@ -18,4 +18,18 @@ class cisco_examples::portchannel {
     port_hash_distribution    => 'adaptive',
     port_load_defer           => 'true',
   }
+
+  cisco_interface { 'port-channel100':
+    switchport_mode               => trunk,
+    switchport_trunk_allowed_vlan => '2,3',
+    switchport_trunk_native_vlan  => '2',
+  }
+
+  [1,2].each |$i| {
+    cisco_interface_channel_group { "Ethernet1/${i}":
+      channel_group => 100,
+    }
+  }
+
+
 }
