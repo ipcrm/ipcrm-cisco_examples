@@ -3,7 +3,7 @@ class cisco_examples {
   ntp_config{'default':
     source_interface => 'mgmt0',
   }
-  ntp_server{'time.example.lan':
+  ntp_server{'24.56.178.140':
     ensure => present,
   }
 
