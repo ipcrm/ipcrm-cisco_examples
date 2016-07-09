@@ -1,11 +1,4 @@
 class cisco_examples {
-  # DNS
-  network_dns {'dns configuration':
-    ensure  => present,
-    search  => ['example.lan'],
-    servers => ['8.8.8.8', '8.8.8.4'],
-  }
-
   # NTP
   ntp_config{'ntp config':
     source_interface => 'mgmt0',
