@@ -1,25 +1,22 @@
 class cisco_examples {
   # NTP
-  ntp_config{'ntp config':
+  ntp_config{'default':
     source_interface => 'mgmt0',
   }
-  ntp_server{'ntp server':
+  ntp_server{'time.example.lan':
     ensure => present,
-    name   => 'time.example.lan',
   }
 
   # Configure some VLANs
-  cisco_vlan { '2':
-    ensure    => 'present',
-    shutdown  => false,
-    state     => 'active',
-    vlan_name => 'example 2',
+  cisco_vlan { 'vlan2':
+    ensure   => 'present',
+    shutdown => false,
+    state    => 'active',
   }
-  cisco_vlan { '3':
-    ensure    => 'present',
-    shutdown  => false,
-    state     => 'active',
-    vlan_name => 'example 3',
+  cisco_vlan { 'vlan3':
+    ensure   => 'present',
+    shutdown => false,
+    state    => 'active',
   }
 
   # VTP
