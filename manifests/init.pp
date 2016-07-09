@@ -9,14 +9,16 @@ class cisco_examples {
 
   # Configure some VLANs
   cisco_vlan { 'vlan2':
-    ensure   => 'present',
-    shutdown => false,
-    state    => 'active',
+    ensure    => 'present',
+    shutdown  => false,
+    state     => 'active',
+    vlan_name => 'vlan2',
   }
   cisco_vlan { 'vlan3':
-    ensure   => 'present',
-    shutdown => false,
-    state    => 'active',
+    ensure    => 'present',
+    shutdown  => false,
+    state     => 'active',
+    vlan_name => 'vlan3',
   }
 
   # VTP
